@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="cabecalho">
+        <div class="img-1">
+            <img src="barbie/pngwing.com.png" alt="png">
+        </div>
+        <div class="heading">
+            <h1>Fórmulario</h1>
+            <h1 style="color: #d32428; font-size: 100px;">CORAGEM</h1>
+            <h1 style="color: #991d80;font-size: 80px;">O CÃO COVARDE</h1>
+        </div>
+        <div class="img-2">
+            <img src="barbie/png.com.png" alt="png">
+        </div>
+    </div>
+    <main>        
+        <form name="submit-to-google-sheet1">
+
+        <h2>Você já assistiu, Coragem o cão covarde?</h2>
+        <input name="assistiu" type="radio" value="sim" >
+        <label name="assistiu" for="assistiu">
+            Nunca assiti
+        </label>
+        
+        <input name="assistiu" type="radio" value="não" >
+        <label name="assistiu" for="assistiu">
+            Já assisti
+        </label>    
+        
+        <h2>Você tinha medo do desenho?</h2>
+
+        
+        <input name="assustava" type="radio" value="sim" >
+        <label name="assustava" for="assustava">
+            Sim
+        </label>
+        <input name="assustava" type="radio" value="nao" >
+        <label name="assustava" for="assustava">
+            Não
+        </label>
+        
+        <h2>Qual seu personagem preferido?</h2>
+        
+        <select name="personagem-preferido">
+            <option value="coragem">Coragem</option>
+            <option value="eustacio">Eustácio Bagge</option>
+            <option value="muriel">Muriel Bagge</option>
+            <option value="kats">Katz</option>
+        </select>
+        
+        <h2>Em que parte do dia você assistia?</h2>
+        <input name="periodo" type="checkbox" id="inlineCheckbox1" value="manha">
+        <label name="periodo" for="inlineCheckbox1">As manhãs</label>
+        <input name="periodo" type="checkbox" id="inlineCheckbox1" value="tarde">
+        <label name="periodo" for="inlineCheckbox1">A tarde</label>
+        <input name="periodo" type="checkbox" id="inlineCheckbox1" value="noite">
+        <label name="periodo" for="inlineCheckbox1">A noite</label>
+        
+
+
+        <h2>Você gostaria de acrescentar algo a mais?</h2>
+        <input class="textbox" name="sugestao" type="text" placeholder="Mensagem">
+        <br>
+        <button class="botao" type="submit">Enviar</button>
+        </form>
+        
+    </main>
+    <h2 style="text-align: center;">Obrigado por responder <3</h2>
+    <div class="imagem-gif">
+        <img width="200px" src="barbie/pngegg(2).png" alt="png">
+        <img width="200px" height="200px" src="barbie/49d0e2113621735.602bd0753f31e.gif" alt="">
+        <img width="200px" height="200px" src="barbie/pngegg(4).png" alt="png">
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwe8y5zv9LIUI5u3NZMZBvPPbBLsNQRube0y2rGVGNMXa_7xsYURuARJdOTaWSIgq0F/exec'
+        const form = document.forms['submit-to-google-sheet1']
+        
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+            form.reset();
+        })
+    </script>
+</body>
+</html>

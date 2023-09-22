@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Patrick+Hand&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background-color: #1d75b0;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 60px;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.3em;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+h2{
+    margin-top: 10px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2em;
+}
+
+form{
+    text-align: center;
+}
+
+.imagem{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.cabecalho{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.cabecalho img{
+    width: 200px;
+    height: 200px;
+}
+
+main{
+    text-align: center;
+}
+
+
+.botao{
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: #991d80;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    
+}
+
+.botao:hover{
+    background-color: #3f0e35;
+    padding: 17px 33px;
+    border: 0;
+}
+
+.textbox{
+    padding: 8px 5px;
+    padding-right: 24px;
+}
+
+label{
+    font-family: 'Crete Round', serif;
+}
+
+.imagem-gif{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
